@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield | Cyber Security Awareness</title>
+    <meta name="description"
+        content="Learn how to protect yourself online with our interactive cyber security awareness portal.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="glass">
+                <div class="logo">CYBERSHIELD</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#phishing">Phishing</a></li>
+                    <li><a href="#passwords">Passwords</a></li>
+                    <li><a href="#browsing">Browsing</a></li>
+                    <li><a href="#quiz">Security Quiz</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="#get-started" class="btn btn-primary">Get Started</a>
+                    <button id="menu-toggle" class="btn"
+                        style="display: none; padding: 0.5rem; margin-left: 10px; background: transparent;"><i
+                            class="fas fa-bars"></i></button>
+                </div>
+            </nav>
+        </header>
+
+        <section id="home" class="hero">
+            <h1>Master Your Digital <span style="color: var(--primary);">Defense</span></h1>
+            <p>Empowering you with the knowledge to stay safe in an ever-evolving digital landscape. Phishing,
+                passwords, and privacy—we've got you covered.</p>
+            <div class="hero-actions">
+                <a href="#phishing" class="btn btn-primary">Start Learning</a>
+                <a href="#quiz" class="btn" style="border: 1px solid var(--border-glass); margin-left: 10px;">Take
+                    Quiz</a>
+            </div>
+        </section>
+
+        <section id="phishing">
+            <h2>Phishing Awareness</h2>
+            <div class="grid">
+                <div class="card glass">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h3>Email Red Flags</h3>
+                    <p>Learn to spot suspicious sender addresses, urgent language, and mismatched links before you
+                        click.</p>
+                </div>
+                <div class="card glass">
+                    <i class="fas fa-link"></i>
+                    <h3>Malicious Links</h3>
+                    <p>Always hover over links to see the true destination. Don't be fooled by clever URL masking.</p>
+                </div>
+                <div class="card glass">
+                    <i class="fas fa-user-secret"></i>
+                    <h3>Social Engineering</h3>
+                    <p>Be wary of unsolicited requests for sensitive information, even if they seem to come from trusted
+                        sources.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="passwords">
+            <h2>Password Security</h2>
+            <div class="grid">
+                <div class="card glass">
+                    <i class="fas fa-key"></i>
+                    <h3>Complexity vs. Length</h3>
+                    <p>Understand why long passphrases are often more secure and easier to remember than short, complex
+                        passwords.</p>
+                </div>
+                <div class="card glass">
+                    <i class="fas fa-vault"></i>
+                    <h3>Password Managers</h3>
+                    <p>Why using a unique, strong password for every account is critical, and how managers make it easy.
+                    </p>
+                </div>
+                <div class="card glass">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>2FA / MFA</h3>
+                    <p>Add an extra layer of protection. Even if your password is stolen, your account remains secure.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Password Strength Checker -->
+            <div class="glass"
+                style="margin-top: var(--spacing-md); padding: var(--spacing-md); max-width: 600px; margin-left: auto; margin-right: auto;">
+                <h3 style="margin-bottom: 0.5rem; text-align: center;">Strength Checker</h3>
+                <p style="color: var(--text-dim); margin-bottom: 1rem; text-align: center;">Test your password's
+                    resilience against common attacks.</p>
+                <div style="position: relative; margin-bottom: 1rem;">
+                    <input type="password" id="password-input" placeholder="Type a password..."
+                        style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-glass); background: var(--bg-surface); color: white; outline: none;">
+                </div>
+                <div
+                    style="height: 8px; width: 100%; background: var(--bg-surface); border-radius: 4px; overflow: hidden; margin-bottom: 0.5rem;">
+                    <div id="strength-bar"
+                        style="height: 100%; width: 0%; transition: width 0.3s ease; border-radius: 4px;"></div>
+                </div>
+                <p id="strength-text"
+                    style="font-weight: 600; font-size: 0.9rem; text-align: right; margin-bottom: 0.5rem;">Strength:
+                    <span style="color: var(--text-dim);">...</span>
+                </p>
+                <ul id="feedback-list"
+                    style="font-size: 0.85rem; color: var(--warning); list-style: none; text-align: left; padding-left: 0;">
+                </ul>
+            </div>
+        </section>
+
+        <section id="browsing">
+            <h2>Safe Browsing</h2>
+            <div class="grid">
+                <div class="card glass">
+                    <i class="fas fa-shield-virus"></i>
+                    <h3>Secure Connections</h3>
+                    <p>Always look for HTTPS in the URL. It ensures your communication with the site is encrypted.</p>
+                </div>
+                <div class="card glass">
+                    <i class="fas fa-cloud-download-alt"></i>
+                    <h3>Cautious Downloads</h3>
+                    <p>Only download software from official sources. Third-party sites often bundle malware with
+                        legitimate apps.</p>
+                </div>
+                <div class="card glass">
+                    <i class="fas fa-wifi"></i>
+                    <h3>Public Wi-Fi Risks</h3>
+                    <p>Public hotspots are insecure. Use a VPN or avoid accessing sensitive accounts like banking on
+                        public networks.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz" class="glass"
+            style="margin-top: var(--spacing-lg); padding: var(--spacing-md); text-align: center;">
+            <h2>Test Your Knowledge</h2>
+            <p style="margin-bottom: var(--spacing-md);">Ready to see how much you've learned? Start the interactive
+                security quiz.</p>
+            <div id="quiz-container">
+                <button id="start-quiz" class="btn btn-primary">Start Security Quiz</button>
+            </div>
+        </section>
+
+        <section id="contact" class="glass" style="margin-top: var(--spacing-lg); padding: var(--spacing-md);">
+            <h2 style="margin-bottom: var(--spacing-sm);">Contact Us</h2>
+            <p style="text-align: center; color: var(--text-dim); margin-bottom: 2rem;">Have questions? Reach out to our
+                security experts.</p>
+            <form id="contact-form" style="max-width: 600px; margin: 0 auto; display: grid; gap: 1rem;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <input type="text" name="name" placeholder="Your Name" required
+                        style="padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-glass); background: var(--bg-surface); color: white; outline: none;">
+                    <input type="email" name="email" placeholder="Your Email" required
+                        style="padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-glass); background: var(--bg-surface); color: white; outline: none;">
+                </div>
+                <input type="text" name="subject" placeholder="Subject"
+                    style="padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-glass); background: var(--bg-surface); color: white; outline: none;">
+                <textarea name="message" placeholder="Your Message" required
+                    style="padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-glass); background: var(--bg-surface); color: white; outline: none; min-height: 150px;"></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            <div id="contact-response" style="text-align: center; margin-top: 1rem; font-weight: 500;"></div>
+        </section>
+
+        <section id="ai-advisor" class="glass"
+            style="margin-top: var(--spacing-lg); padding: var(--spacing-md); border: 1px solid var(--accent); position: relative; overflow: hidden;">
+            <div class="ai-glow"
+                style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at center, hsla(170, 100%, 45%, 0.05) 0%, transparent 70%); pointer-events: none;">
+            </div>
+            <h2 style="margin-bottom: var(--spacing-sm);"><i class="fas fa-robot" style="color: var(--accent);"></i> AI
+                Security Advisor</h2>
+            <p style="text-align: center; color: var(--text-dim); margin-bottom: 2rem;">Ask your digital assistant about
+                any security topic.</p>
+            <div style="max-width: 600px; margin: 0 auto; display: flex; gap: 10px;">
+                <input type="text" id="ai-input" placeholder="Ask about phishing, passwords, VPN..."
+                    style="flex: 1; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-glass); background: var(--bg-surface); color: white; outline: none;">
+                <button id="ai-btn" class="btn" style="background: var(--accent); color: var(--bg-main);">Ask
+                    Advisor</button>
+            </div>
+            <div id="ai-response"
+                style="margin-top: 1.5rem; text-align: center; min-height: 50px; font-weight: 500; color: var(--text-main); transition: opacity 0.3s ease;">
+                How can I help you stay safe today?
+            </div>
+        </section>
+
+        <section id="newsletter" class="glass"
+            style="margin-top: var(--spacing-lg); padding: var(--spacing-md); text-align: center; border: 1px dashed var(--primary);">
+            <h3>Stay Updated</h3>
+            <p style="color: var(--text-dim); margin-bottom: 1.5rem;">Receive weekly tips on the latest security threats
+                and how to avoid them.</p>
+            <form id="newsletter-form"
+                style="display: flex; gap: 10px; max-width: 500px; margin: 0 auto; flex-wrap: wrap;">
+                <input type="email" name="email" placeholder="Enter your email" required
+                    style="flex: 1; min-width: 250px; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-glass); background: var(--bg-surface); color: white; outline: none;">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+            <div id="newsletter-response" style="text-align: center; margin-top: 1rem; font-weight: 500;"></div>
+        </section>
+
+        <footer
+            style="padding: var(--spacing-md) 0; text-align: center; color: var(--text-dim); border-top: 1px solid var(--border-glass);">
+            <p>&copy; 2026 CyberShield Project by Riya. Stay Safe. Stay Secure.</p>
+        </footer>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
